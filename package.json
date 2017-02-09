@@ -1,0 +1,14 @@
+{
+  "name": "bus.fyi.03",
+  "version": "0.0.1",
+  "description": "Bus & Train Tracking web app",
+  "main": "index.js",
+  "repository": "git@github.com:ericmikkelsen/bus.fyi.03.git",
+  "author": "Eric Mikkelsen",
+  "license": "MIT",
+  "dependencies": {
+    "adm-zip": "^0.4.7",
+    "csvtojson": "^1.1.3",
+    "request": "^2.79.0"
+  }
+}
