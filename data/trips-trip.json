@@ -1,0 +1,17 @@
+{
+  "postType" : "trip",
+  "fileName"  :   {
+    "folderName"        : ["trips"],
+    "fileNameParts"     : ["${trip_id}"],
+    "fileNameExtension" : "json"
+  },
+  "sources"   : [
+    {
+      "src"               : "trips.txt",
+      "assignToProperty"  : "head",
+      "addProperties"     : true,
+      "push"              : false,
+      "sortBy"            : "departure_time"
+    }
+  ]
+}

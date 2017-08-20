@@ -1,0 +1,24 @@
+{
+  "post-type" : "route-index",
+  "fileName"  : {
+    "folderName"        : ["routes","index"],
+    "fileNameParts"     : ["route"],
+    "fileNameExtension" : "json",
+  },
+  "sources"   : [
+    {
+      "src"                 : "agency.txt",
+      "assignToProperty"    : ["head"],
+      "addProperties"       : true,
+      "push"                : false,
+      "sortBy"              : false
+    },
+    {
+      "src"                 : "routes.txt",
+      "assignToProperty"    : ["routes","{{route_type}}"],
+      "addProperties"       : ["route_id","route_name","route_type"],
+      "push"                : true,
+      "sortBy"              : ["route_name"]
+    },
+  ]
+}

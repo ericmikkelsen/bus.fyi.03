@@ -1,0 +1,24 @@
+{
+  "postType" : "route",
+  "fileName"  : {
+    "folderName"        : ["routes","${route_id}"],
+    "fileNameParts"     : ["route"],
+    "fileNameExtension" : "json"
+  },
+  "sources"   : [
+    {
+      "src"                 : "routes.txt",
+      "assignToProperty"    : "head",
+      "addProperties"       : true,
+      "push"                : false,
+      "sortBy"              : false
+    },
+    {
+      "src"                 : "trips.txt",
+      "assignToProperty"    : "trips",
+      "addProperties"       : ["trip_id"],
+      "push"                : true,
+      "sort"                : true
+    }
+  ]
+}

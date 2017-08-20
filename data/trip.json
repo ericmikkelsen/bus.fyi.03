@@ -1,0 +1,36 @@
+{
+  "postType" : "trip",
+  "fileName"  :   {
+    "folderName"        : ["routes","${route_id}","trips"],
+    "fileNameParts"     : ["${trip_id}"],
+    "fileNameExtension" : "json"
+  },
+  "sources"   : [
+    {
+      "src"                     : "trips.txt",
+      "assignToProperty"        : "head",
+      "addProperties"           : true,
+      "push"                    : false,
+      "sortBy"                  : "departure_time"
+    },
+    {
+      "src"                     : "stop_times.txt",
+      "assignToProperty"        : "stop_times",
+      "addProperties"           : true,
+      "push"                    : true,
+      "sortBy"                  : "departure_time",
+      "related"                 : [
+        {
+          "fileName"  : {
+              "folderName"        : ["stops"],
+              "fileNameParts"     : ["${stop_id}"],
+              "fileNameExtension" : "json"
+          },
+          "properties"    : [
+            ["head", "stop_name"]
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+[
+  {
+    "src"       : "routes.txt",
+    "type"      : "csv",
+    "contexts"  : [
+      "route.json"
+    ]
+  },
+  {
+    "src"       : "trips.txt",
+    "type"      : "csv",
+    "contexts"  : [
+      "trips-trip.json",
+      "route.json",
+      "trip.json"
+    ]
+  },
+  {
+    "src"       : "stops.txt",
+    "type"      : "csv",
+    "contexts"  : [
+      "stop.json"
+    ]
+  },
+  {
+    "src"       : "stop_times.txt",
+    "type"      : "csv",
+    "contexts"  : [
+      "trip.json",
+      "stop.json"
+    ]
+  }
+]

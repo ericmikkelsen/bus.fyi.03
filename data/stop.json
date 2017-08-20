@@ -1,0 +1,17 @@
+{
+  "postType" : "stop",
+  "fileName"  : {
+    "folderName"        : ["stops"],
+    "fileNameParts"     : ["${stop_id}"],
+    "fileNameExtension" : "json"
+  },
+  "sources"   : [
+    {
+      "src"                     : "stops.txt",
+      "assignToProperty"        : "head",
+      "addProperties"           : true,
+      "push"                    : false,
+      "sortBy"                  : false
+    }
+  ]
+}

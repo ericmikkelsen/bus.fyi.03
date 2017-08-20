@@ -1,0 +1,34 @@
+{
+  "postType"  : "map",
+  "fileName"  :   {
+    "folderName"        : ["..","maps"],
+    "fileNameParts"     : ["${mapName}"],
+    "fileNameExtension" : "json"
+  },
+  "sources"   : [
+    {
+      "src"               : "stops.txt",
+      "assignToProperty"  : "head",
+      "addProperties"     : true,
+      "push"              : true,
+      "sortBy"            : "stop_lat",
+      "related"           : [
+        {
+          "fileName"  : {
+              "fileNameParts"     : ["agency"],
+              "fileNameExtension" : "json"
+          },
+          "properties"    : [
+            ["head", "agency_id"],
+            ["head", "agency_name"]
+          ]
+        }
+      ],
+      "mutate"                  : [
+        {
+          "mapName"   :  "${stop_lat.substring(0,5)}x${stop_lon.substring(0,5)}.json"
+        }
+      ]
+    }
+  ]
+}
