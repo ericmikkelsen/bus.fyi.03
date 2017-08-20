@@ -1,16 +1,25 @@
 {
   "agencies": [
-      {"agency":"chicago-transit-authority","url":"http://www.transitchicago.com/downloads/sch_data/google_transit.zip"},
-      {"agency":"metra","url":"https://transitfeeds.com/p/metra/169/latest/download"},
-      {"agency":"pace","url":"http://www.pacebus.com/gtfs/gtfs.zip"}
-    ],
-  "zipFileLocation"   : "dist/zip/",
-  "unzipFileLocation" : "dist/csv/",
-  "appLocation"       : "dist/app/",
-  "appFileLocation"   : "dist/app/{{agency}}/",
-  "mapLocations"      : "dist/app/m/",
-  "dataLocation"      : "dist/data/",
-  "stopLocations"     : "dist/data/{{agency}}/stops/",
-  "tripLocations"     : "dist/data/{{agency}}/trips/",
-  "routeLocations"    : "dist/data/{{agency}}/routes/"
+      {
+        "agency":"cta",
+        "build":false,
+        "url":"http://www.transitchicago.com/downloads/sch_data/google_transit.zip"
+      },
+      {
+        "agency":"metra",
+        "build":true,
+        "url":"https://transitfeeds.com/p/metra/169/latest/download"
+      },
+      {
+        "agency":"pace",
+        "build":false,
+        "url":"http://www.pacebus.com/gtfs/gtfs.zip"
+      }
+  ],
+  "folderNames" : {
+      "zip"          : "dist/zip/",
+      "unzip"        : "dist/csv/",
+      "data"         : "dist/data/",
+      "app"          : "dist/www/"
+    }
 }
