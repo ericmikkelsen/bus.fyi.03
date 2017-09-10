@@ -7,6 +7,13 @@
     ]
   },
   {
+    "src"       : "stops.txt",
+    "type"      : "csv",
+    "contexts"  : [
+      "stop.json"
+    ]
+  },
+  {
     "src"       : "trips.txt",
     "type"      : "csv",
     "contexts"  : [
@@ -16,18 +23,11 @@
     ]
   },
   {
-    "src"       : "stops.txt",
-    "type"      : "csv",
-    "contexts"  : [
-      "stop.json"
-    ]
-  },
-  {
     "src"       : "stop_times.txt",
     "type"      : "csv",
     "contexts"  : [
-      "trip.json",
-      "stop.json"
+      "stop.json",
+      "trip.json"
     ]
   }
 ]

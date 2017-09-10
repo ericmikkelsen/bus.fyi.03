@@ -12,6 +12,13 @@
       "addProperties"           : true,
       "push"                    : false,
       "sortBy"                  : false
+    },
+    {
+      "src"                     : "stop_times.txt",
+      "assignToProperty"        : "stop_times",
+      "addProperties"           : true,
+      "push"                    : true,
+      "sortBy"                  : "departure_time",
     }
   ]
 }

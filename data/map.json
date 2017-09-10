@@ -15,7 +15,7 @@
       "related"           : [
         {
           "fileName"  : {
-              "fileNameParts"     : ["agency"],
+              "fileNameParts"     : ["${agency}"],
               "fileNameExtension" : "json"
           },
           "properties"    : [

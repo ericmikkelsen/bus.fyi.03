@@ -17,10 +17,14 @@
       "src"                     : "stop_times.txt",
       "assignToProperty"        : "stop_times",
       "addProperties"           : true,
+      "removeProperties"        : [
+        "route_id",
+        "trip_id"
+      ],
       "push"                    : true,
       "sortBy"                  : "departure_time",
       "related"                 : [
-        {
+          {
           "fileName"  : {
               "folderName"        : ["stops"],
               "fileNameParts"     : ["${stop_id}"],
@@ -28,6 +32,16 @@
           },
           "properties"    : [
             ["head", "stop_name"]
+          ]
+        },
+        {
+          "fileName"  : {
+              "folderName"        : ["trips"],
+              "fileNameParts"     : ["${trip_id}"],
+              "fileNameExtension" : "json"
+          },
+          "properties"    : [
+            ["head", "route_id"]
           ]
         }
       ]
